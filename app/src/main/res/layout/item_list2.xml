@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/id_ciwidey"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_row="0"
+        android:layout_rowWeight="1"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:layout_margin="10dp"
+        android:backgroundTint="#FBFBFB"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_tempat_wisata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ciwidey"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_nama_tempat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ciwidey"
+                android:textColor="#050000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="#34FFFFFF"
+                android:paddingTop="4dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintBottom_toTopOf="@id/tv_alamat"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/tv_alamat"
+                style="@style/Base.Theme.AppCompat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColorHighlight="#050000"
+                tools:text="Jalan Kebon kopi no 351"
+                android:textSize="12sp"
+                android:layout_marginBottom="12dp"
+                android:background="#34FFFFFF"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="4dp"
+                app:layout_constraintStart_toStartOf="@id/tv_nama_tempat"
+                app:layout_constraintEnd_toEndOf="@id/tv_nama_tempat"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
